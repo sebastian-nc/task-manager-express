@@ -34,9 +34,9 @@ async function getUser(req, res, next) {
     res.json(user)
 }
 
-async function createUser(req, res, next) {
-    const { name, email, age } = req.body
+async function createUser(req, res, next) {    
     try {
+        const { name, email, age } = req.body
         const user = await usersModel.createUser(name, email, age)
         res.json(user)
     } catch (error) {
@@ -48,7 +48,10 @@ async function createUser(req, res, next) {
 
 async function updateUser(req, res, next) {
     const { id } = req.params
-    const { name, email, age } = req.body
+
+    const userDB = await usersModel.getUser(id)
+
+    const { name, email, age } = {...userDB, ...req.body}
 
     const user = await usersModel.updateUser(id, name, email, age)
 

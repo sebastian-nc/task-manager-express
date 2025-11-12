@@ -1,0 +1,89 @@
+###
+GET  http://localhost:3000/api/users
+
+###
+GET  http://localhost:3000/api/users/349
+
+###
+POST  http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "names" : "negrita",
+    "email": "negrita@gmail.com",
+    "age": 24
+}
+
+###
+PUT  http://localhost:3000/api/users/48
+Content-Type: application/json
+
+{
+    "name" : "sebas",
+    "emails": "sebastian@gmail.com",
+    "ages": 21
+}
+
+###
+DELETE  http://localhost:3000/api/users/47
+
+
+###
+GET  http://localhost:3000/api/categories
+
+###
+GET  http://localhost:3000/api/categories/1
+
+###
+POST  http://localhost:3000/api/categories
+Content-Type: application/json
+
+{
+    "name": "New Category",
+    "description": "Description of the new category"
+}
+
+###
+PUT  http://localhost:3000/api/categories/1
+Content-Type: application/json
+
+{
+    "name": "Updated Category Name"
+}
+###
+
+DELETE  http://localhost:3000/api/categories/15
+
+
+###
+
+GET http://localhost:3000/api/tasks?status=done
+
+###
+GET http://localhost:3000/api/tasks/3
+###
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Node js",
+    "description": "First applicaction",
+    "user_id": 1,
+    "category_id": 1,
+    "status": "done"
+}
+
+###
+PUT http://localhost:3000/api/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Node js",
+    "description": "First applicaction",
+    "user_id": 48,
+    "category_id": 1,
+    "status": "pending"
+}
+
+###
+DELETE http://localhost:3000/api/tasks/1

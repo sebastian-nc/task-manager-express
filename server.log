@@ -1,0 +1,11 @@
+[dotenv@17.2.3] injecting env (5) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+🚀 Servidor corriendo en http://localhost:3000
+✅ Conectado a PostgreSQL
+validate.middleware parsed -> { status: 'done', page: 1 }
+validate.middleware req has own false descriptor -> undefined
+validate.middleware req.query after -> [Object: null prototype] { status: 'done' }
+validate.middleware req.query keys -> [ 'status' ]
+controller req.query -> {"status":"done"}
+controller req.query prototype -> null
+controller req has own false descriptor -> undefined
+controller req ownKeys -> [ 'status' ]

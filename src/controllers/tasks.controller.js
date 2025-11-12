@@ -2,6 +2,7 @@ const tasksModel = require('../models/tasks.model')
 
 
 async function getTasks(req, res) {
+    console.log(req.query)
     const tasks =  await tasksModel.getTasksAll()
     res.json(tasks)
 }
